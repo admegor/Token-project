@@ -92,3 +92,15 @@
 .header__menu-burger.active span {
     transform: scale(0);
 }
+
+.nav.mobile-active .nav__list {
+    flex-direction: column;
+    & li {
+        margin-left: 0;
+    }
+}
+
+.header.header-mobile {
+    height: auto;
+    background-color: $accent;
+}
