@@ -1,0 +1,70 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../font/#{$file_name}.woff") format("woff"),
+        url("../font/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@mixin lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@include font("Montserrat",
+"Montserrat-Regular",
+"400",
+"normal");
+@include font("Montserrat",
+"Montserrat-Medium",
+"500",
+"normal");
+@include font("Montserrat",
+"Montserrat-SemiBold",
+"600",
+"normal");
+@include font("Montserrat",
+"Montserrat-Bold",
+"700",
+"bold");
+@include font("Raleway",
+"Raleway-Bold",
+"700",
+"bold");
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@import "normalize.scss";
+@import "scaffolding.scss";
+@import "variables.scss";
+body {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    color: #2A2A2A;
+    overflow-x: hidden
+}
+
+@import "block/*.scss";
+@include md {
+    .section {
+        padding: 75px 0;
+    }
+    .block-title {
+        font-size: 30px;
+    }
+}

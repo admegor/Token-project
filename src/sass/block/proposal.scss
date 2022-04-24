@@ -1,0 +1,95 @@
+.proposal {
+    &__title {
+        text-align: center;
+        margin-bottom: 103px;
+    }
+    &__block {
+        width: 100%;
+        padding: 25px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        cursor: pointer;
+        &:nth-child(1) {
+            background-color: $accent;
+        }
+        &:nth-child(2) {
+            background-color: #FEA844;
+        }
+        &:nth-child(3) {
+            background-color: #56D62A;
+        }
+    }
+    &__block+&__block {
+        margin-left: 74px;
+    }
+    &__wrap {
+        display: flex;
+    }
+    &__block-title {
+        color: #ffffff;
+        font-size: 23px;
+        margin: 0;
+        margin-top: 50px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+    &__block-more {
+        margin: 0;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 500;
+        &::after {
+            content: "❯";
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+    &__block-image-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    @include lg {
+        &__block+&__block {
+            margin-left: 24px;
+        }
+    }
+    @include md {
+        &__wrap {
+            flex-direction: column;
+        }
+        &__block+&__block {
+            margin-left: initial;
+            margin-top: 21px;
+        }
+        &__block {
+            flex-direction: row;
+            justify-content: space-between;
+            height: 180px;
+        }
+        &__title {
+            text-align: left;
+            max-width: 310px;
+        }
+        &__block-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: right;
+        }
+        &__block-title {
+            margin: 0;
+        }
+        &__block-image-wrap {
+            margin-top: 0;
+            align-self: center;
+        }
+        &__block-image {
+            max-height: 136px;
+        }
+        &__block:nth-child(2) &__block-image {
+            max-height: 106px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.button-main {
+    color: $accent;
+    padding: 8px 58px;
+    border: 1px solid $accent;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.hero__button {
+    color: $accent;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    border: 1px solid $accent;
+    padding: 14px 52px;
+    &--accent {
+        padding: 14px 82px;
+        color: #ffffff;
+        background-color: $accent;
+    }
+    @include md {
+        padding: 9px 38px;
+        &--accent {
+            padding: 9px 38px;
+        }
+    }
+}

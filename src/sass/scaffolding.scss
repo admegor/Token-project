@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button-reset {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 168px 0;
+}
+
+.block-title {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 1.16;
+    font-weight: 600;
+    margin: 0;
+}
