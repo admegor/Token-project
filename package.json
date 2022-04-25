@@ -1,5 +1,5 @@
 {
-  "name": "gulp-start",
+  "name": "token-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -56,5 +56,8 @@
     "url": "https://github.com/admegor/gulp-start/issues"
   },
   "homepage": "https://github.com/admegor/gulp-start#readme",
+  "directories": {
+    "doc": "docs"
+  },
   "description": ""
 }

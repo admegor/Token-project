@@ -16,6 +16,12 @@
             color: $accent;
         }
     }
+    &.mobile-active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 20px 30px;
+    }
     @include lg {
         &__item+&__item {
             margin-left: 16px;
@@ -41,7 +47,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 63px;
     width: 100%;
     position: absolute;
     background-color: $accent;
