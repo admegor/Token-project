@@ -514,7 +514,7 @@ body {
   bottom: -50px;
   width: 80px;
   height: 15px;
-  background: url("../../img/icon-arrow.svg") no-repeat 0 0;
+  background: url("../img/icon-arrow.svg") no-repeat 0 0;
 }
 
 .info__block-title {
@@ -958,7 +958,7 @@ body {
 
 @supports (-webkit-appearance:none) {
   .info__block::after {
-    background: url("../../img/icon-arrow.svg") no-repeat 0 0;
+    background: url("../img/icon-arrow.svg") no-repeat 0 0;
   }
 }
 
