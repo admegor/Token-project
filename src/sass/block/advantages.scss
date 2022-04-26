@@ -18,13 +18,11 @@
         }
         @include md {
             column-gap: 12px;
+            grid-template-rows: repeat(3, minmax(200px, 276px));
         }
-        
     }
     &__block {
         color: #ffffff;
-        background-color: #56D62A;
-        border: 2px solid #2b6e14;
         padding: 24px 16px;
         display: flex;
         flex-direction: column;
@@ -32,15 +30,42 @@
         height: 450px;
         position: relative;
         transition: all .3s ease;
+        @include md {
+            height: 276px;
+        }
         &:nth-child(1) .advantages__image {
+            background-image: url("../../img/icon-lamp.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        &:nth-child(2) .advantages__image {
+            background: url("../../img/icon-computer.png") no-repeat center top;
+        }
+        &:nth-child(3) .advantages__image {
+            background: url("../../img/icon-shield.png") no-repeat center top;
+        }
+        &:nth-child(4) .advantages__image {
+            background: url("../../img/icon-checklist.png") no-repeat center top;
+        }
+        &:nth-child(5) .advantages__image {
+            background: url("../../img/icon-analytics.png") no-repeat center top;
+        }
+        &:nth-child(6) .advantages__image {
+            background: url("../../img/icon-coins.png") no-repeat center top;
+        }
+        & .advantages__image {
             width: calc(100% - 32px);
             height: calc(100% - 50px);
             position: absolute;
             top: 0;
-            background: url("../../img/icon-lamp.png") no-repeat center top;
             margin-top: 50px;
             overflow: hidden;
             transition: all .3s ease;
+            @include md {
+                background-size: 50% !important;
+                height: calc(100% - 20px);
+                margin-top: 20px;
+            }
             & .advantages__image-gradient {
                 transition: all .3s ease;
                 width: 100%;
@@ -49,9 +74,53 @@
             }
         }
     }
+    &__block:nth-child(1) {
+        background-color: #56D62A;
+    }
+    &__block:nth-child(2) {
+        background-color: #FFAD28;
+    }
+    &__block:nth-child(3) {
+        background-color: #F55151;
+    }
+    &__block:nth-child(4) {
+        background-color: #151515;
+    }
+    &__block:nth-child(5) {
+        background-color: #7E44FE;
+    }
+    &__block:nth-child(6) {
+        background-color: #FA44FE;
+    }
+    &__block:hover .advantages__image .advantages__image-gradient {
+        height: 100%;
+    }
     &__block:nth-child(1):hover .advantages__image .advantages__image-gradient {
         background: linear-gradient(0.61deg, #56D62A 57.3%, rgba(86, 214, 42, 0.23) 99.47%);
         transform: translateY(0);
+    }
+    &__block:nth-child(2):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(0.61deg, #FFAD28 57.3%, rgba(255, 173, 40, 0.23) 99.47%);
+        transform: translateY(0);
+    }
+    &__block:nth-child(3):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(0.61deg, #F55151 57.3%, rgba(245, 81, 81, 0.23) 99.47%);
+        transform: translateY(0);
+    }
+    &__block:nth-child(4):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(0.61deg, #151515 57.3%, rgba(21, 21, 21, 0.23) 99.47%);
+        transform: translateY(0);
+    }
+    &__block:nth-child(5):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(0.61deg, #7E44FE 57.3%, rgba(126, 68, 254, 0.23) 99.47%);
+        transform: translateY(0);
+    }
+    &__block:nth-child(6):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(360deg, #FA44FE 64.16%, rgba(250, 68, 254, 0) 181.16%);
+        transform: translateY(0);
+    }
+    &__block:nth-child(1):hover &__content {
+        margin-bottom: 28px;
     }
     &__content {
         visibility: hidden;
@@ -59,6 +128,15 @@
         transform: translateY(30px);
         max-height: 0;
         transition: all .3s ease;
+        margin: 0;
+        z-index: 1;
+        @include lg {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+        @include md {
+            font-size: 13px;
+        }
     }
     &__block:hover &__content {
         visibility: visible;
@@ -79,10 +157,6 @@
             margin-left: 10px;
             font-size: 10px;
         }
-    }
-    &__content {
-        margin-bottom: 28px;
-        z-index: 1;
     }
     &__block-title {
         z-index: 1;
