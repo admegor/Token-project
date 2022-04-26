@@ -29,6 +29,15 @@ img {
     overflow: hidden;
 }
 
+body {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    color: #2A2A2A;
+    overflow-x: hidden
+}
+
 .button-reset {
     background-color: transparent;
     border: none;
@@ -52,4 +61,7 @@ img {
     line-height: 1.16;
     font-weight: 600;
     margin: 0;
+    & span {
+        color: #7e44fe;
+    }
 }

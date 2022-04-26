@@ -1,0 +1,94 @@
+.advantages {
+    &__title {
+        margin-bottom: 100px;
+        @include md {
+            margin-bottom: 35px;
+        }
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(200px, 450px));
+        row-gap: 30px;
+        column-gap: 70px;
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, minmax(200px, 450px));
+            column-gap: 30px;
+        }
+        @include md {
+            column-gap: 12px;
+        }
+        
+    }
+    &__block {
+        color: #ffffff;
+        background-color: #56D62A;
+        border: 2px solid #2b6e14;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 450px;
+        position: relative;
+        transition: all .3s ease;
+        &:nth-child(1) .advantages__image {
+            width: calc(100% - 32px);
+            height: calc(100% - 50px);
+            position: absolute;
+            top: 0;
+            background: url("../../img/icon-lamp.png") no-repeat center top;
+            margin-top: 50px;
+            overflow: hidden;
+            transition: all .3s ease;
+            & .advantages__image-gradient {
+                transition: all .3s ease;
+                width: 100%;
+                height: calc(100% - 50px);
+                transform: translateY(100px);
+            }
+        }
+    }
+    &__block:nth-child(1):hover .advantages__image .advantages__image-gradient {
+        background: linear-gradient(0.61deg, #56D62A 57.3%, rgba(86, 214, 42, 0.23) 99.47%);
+        transform: translateY(0);
+    }
+    &__content {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+        max-height: 0;
+        transition: all .3s ease;
+    }
+    &__block:hover &__content {
+        visibility: visible;
+        opacity: 1;
+        height: fit-content;
+        max-height: 100%;
+        transform: translateY(0);
+    }
+    &__block-more {
+        margin: 0;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        z-index: 1;
+        &::after {
+            content: "❯";
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+    &__content {
+        margin-bottom: 28px;
+        z-index: 1;
+    }
+    &__block-title {
+        z-index: 1;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 25px;
+        margin: 0;
+    }
+}

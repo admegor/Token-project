@@ -2,27 +2,72 @@
     text-align: center;
     &__title {
         margin-bottom: 45px;
-        & span {
-            color: $accent;
-        }
     }
     &__subtitle {
         max-width: 740px;
         margin: 0 auto;
         margin-bottom: 108px;
+        @include md {
+            font-size: 14px;
+            line-height: 1.2;
+            margin-bottom: 60px;
+        }
     }
     &__wrap {
         display: flex;
         position: relative;
-        width: 99%;
+        width: 100%;
+        height: 320px;
+        border: 18px solid #ffffff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        @include md {
+            height: 112px;
+            border: 6px solid #ffffff;
+        }
+    }
+    &__inner {
+        display: flex;
+        width: 100%;
     }
     &__block {
         color: #ffffff;
         width: 33.3%;
         padding: 50px 0;
         background-color: $accent;
-        height: 300px;
+        height: 284px;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include lg {
+            font-size: 18px;
+        }
+        @include md {
+            font-size: 14px;
+            height: 100px;
+        }
+        &:first-child::after,
+        &:last-child::after {
+            content: "";
+            position: absolute;
+            top: 82px;
+            right: 0;
+            width: 2px;
+            height: 120px;
+            background-color: #ffffff;
+            @include md {
+                height: 42px;
+                top: 29px;
+                width: 1px;
+            }
+        }
+        &:last-child::after {
+            right: initial;
+            left: 0;
+            background-color: #ffffff;
+        }
     }
     &__block-title,
     &__block-text {
@@ -30,18 +75,37 @@
         visibility: hidden;
         height: 0;
         transition: all .3s ease-in-out;
+        margin: 0;
+        @include lg {
+            font-size: 18px;
+        }
+        @include md {
+            font-size: 12px;
+            line-height: 1.2;
+        }
     }
     &__block:hover {
         transition: all .3s ease;
         transform: translatey(-92px);
         transform: scaleY(92px);
-        height: 392px;
+        height: 375px;
+        @include md {
+            transform: translatey(-54px);
+            transform: scaleY(54px);
+            height: 154px;
+        }
+    }
+    &__block--DBX:hover::after {
+        background-color: $accent;
     }
     &__block--bang:hover {
         background-color: #FEA844;
     }
     &__block--s:hover {
         background-color: #56D62A;
+        &::after {
+            background-color: #56D62A;            
+        }
     }
     &__block:hover &__block-title,
     &__block:hover &__block-text {
