@@ -130,11 +130,16 @@
         transition: all .3s ease;
         margin: 0;
         z-index: 1;
+        font-size: 20px;
+        line-height: 22.5px;
+        margin-bottom: 12px;
         @include lg {
+            margin-bottom: 6px;
             font-size: 20px;
             line-height: 1.2;
         }
         @include md {
+            margin-bottom: 0;
             font-size: 13px;
         }
     }

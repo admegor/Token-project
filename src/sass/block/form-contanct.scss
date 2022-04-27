@@ -1,0 +1,39 @@
+.form-contanct {
+    display: flex;
+    flex-direction: column;
+    & input[type="label"] {
+        margin: 0;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+    & input[type="text"] {
+        padding: 10px 15px;
+        margin-bottom: 30px;
+        max-width: 340px;
+    }
+    &__submit {
+        border-color: #ffffff;
+        color: #ffffff;
+        display: block;
+        width: fit-content;
+        padding-left: 82px;
+        padding-right: 82px;
+        margin-top: 105px;
+    }
+    @include md {
+        &__submit {
+            margin-top: 50px;
+        }
+        & input[type="label"] {
+            margin: 0;
+        }
+        & input[type="text"] {
+            margin-bottom: 10px;
+        }
+        &__submit {
+            max-width: 340px;
+            width: 100%;
+        }
+    }
+}

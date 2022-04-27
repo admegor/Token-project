@@ -1,22 +1,92 @@
 .solutions {
     background-color: #2E2E2E;
     color: #ffffff;
+    &__title {
+        margin-bottom: 120px;
+    }
     &__wrap {
         display: flex;
         justify-content: space-between;
     }
     &__block {
-        padding: 20px 20px 30px;
+        padding: 42px 20px 30px;
         border: 2px solid #ffffff;
         max-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+    &__block + &__block {
+        margin-left: 20px;
+    }
     &__block-title {
         text-align: center;
+        margin: 0;
+        margin-bottom: 35px;
     }
     &__block-more {
         margin: 0;
+    }
+    &__text {
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.2;
+        margin-bottom: 22px;
+    }
+    &__list {
+        margin: 0;
+        font-size: 19px;
+        padding-left: 20px;
+        margin-bottom: 40px;
+    }
+    &__item {
+        line-height: 1.2;
+    }
+    @include md {
+        &__title {
+            margin-bottom: 35px;
+        }
+        &__wrap {
+            flex-wrap: wrap;
+        }
+        &__block {
+            margin-bottom: 13px;
+            max-width: initial;
+            width: 49%;
+        }
+        &__block + &__block {
+            margin-left: initial;
+        }
+        &__block-title {
+            font-size: 20px;
+            & br {
+                display: none;
+            }
+        }
+        &__text {
+            font-size: 13px;
+        }
+        &__list {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        &__block:nth-child(2) {
+            margin-left: 1%;
+        }
+        &__block:nth-child(3) {
+            width: 100%;
+            padding: 13px 20px;
+            & .solutions__block-title {
+                margin-bottom: 15px;
+            }
+            & .solutions__list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            & .solutions__item {
+                margin-right: 20px;
+            }
+        }
     }
 }

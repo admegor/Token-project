@@ -1,0 +1,44 @@
+.contacts-section {
+    background-color: $accent;
+    color: #ffffff;
+    padding: 138px 0 175px;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image-wrap {
+        margin-left: 80px;
+    }
+    &__content {
+        max-width: 390px;
+        width: 40%;
+    }
+    &__title {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        margin: 0;
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 65px;
+    }
+    @include lg {
+        &__image-wrap {
+            display: none;
+        }
+        &__content {
+            max-width: auto;
+            width:100%;
+            margin: 0 auto;
+        }
+    }
+    @include md {
+        padding: 50px 0;
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+    }
+}

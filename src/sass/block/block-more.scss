@@ -1,0 +1,12 @@
+.block-more {
+    font-size: 17px;
+        font-weight: 500;
+        &::after {
+            content: "❯";
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    @include md {
+        font-size: 13px;
+    }
+}
