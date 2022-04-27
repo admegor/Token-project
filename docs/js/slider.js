@@ -14,7 +14,6 @@ $(document).ready(function() {
 
     $slider.on("afterChange", function(event, slick, currentSlide, nextSlide) {
         progressBarLine.css('width', (currentSlide + 1) * 20 + "%");
-        console.log(currentSlide);
         paintPoints(currentSlide);
     });
 })
