@@ -11,10 +11,11 @@
         position: absolute;
         top: 5px;
         left: 5px;
-        width: 25%;
+        width: 20%;
         height: 20px;
         background-color: $accent;
         border-radius: 10px;
+        transition: all .5s ease-in;
     }
     &__progressbar-pointer {
         width: 38px;
@@ -28,23 +29,45 @@
         &--active {
             background-color: $accent;
         }
-        & span {
-            display: inline-block;
-            position: absolute;
-            text-align: center;
-            width: 180px;
-            top: 40px;
-            left: calc(50% - 90px);
-            line-height: 1.1;
+    }
+    &__point-text {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        width: 180px;
+        top: 40px;
+        left: calc(50% - 90px);
+        line-height: 1.1;
+        color: #a6a6a6;
+        @include md {
+            font-size: 10px;
         }
     }
+    &__point-text--active {
+        color: $accent;
+    }
     &__progressbar-pointer:nth-child(2) {
-        left: calc(25% - 19px);
+        left: calc(20% - 19px);
     }
     &__progressbar-pointer:nth-child(3) {
-        left: calc(50% - 19px);
+        left: calc(40% - 19px);
     }
     &__progressbar-pointer:nth-child(4) {
-        left: calc(75% - 19px);
+        left: calc(60% - 19px);
+    }
+    &__progressbar-pointer:nth-child(5) {
+        left: calc(80% - 19px);
+    }
+    @include md {
+        &__progressbar-wrap {
+            height: 18px;
+        }
+        &__progressbar-inner {
+            height: 9px;
+        }
+        &__progressbar-pointer {
+            width: 26px;
+            height: 26px;
+        }
     }
 }

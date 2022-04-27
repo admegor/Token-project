@@ -193,21 +193,64 @@
 
     <section class="step-by-step section">
         <div class="container">
-            <h2 class="section__title block-title">Tokenizaiton step by step</h2>
+            <h2 class="step-by-step__title block-title">Tokenizaiton step by step</h2>
             <div class="step-by-step__progressbar progressbar">
                 <div class="progressbar__progressbar-wrap">
                     <div class="progressbar__progressbar-inner"></div>
                     <div class="progressbar__progressbar-pointer progressbar__progressbar-pointer--active">
-                        <span>Preparation</span>
+                        <span class="progressbar__point-text progressbar__point-text--active">Preparation</span>
                     </div>
                     <div class="progressbar__progressbar-pointer">
-                        <span>Creation</span>
+                        <span class="progressbar__point-text">Creation</span>
                     </div>
                     <div class="progressbar__progressbar-pointer">
-                        <span>Listing</span>
+                        <span class="progressbar__point-text">Listing</span>
                     </div>
                     <div class="progressbar__progressbar-pointer">
-                        <span>Asset management</span>
+                        <span class="progressbar__point-text">Asset management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step-by-step__slider step-by-step-slider">
+                <div class="step-by-step-slider__wrap">
+                    <div class="step-by-step-slider__inner">
+                        <div class="step-by-step-slider__slide step-by-step-slider__slide--preparation">
+                            <div class="step-by-step-slider__image-wrap">
+                                <img src="img/slider-slide1.svg" alt="Компьютер" class="step-by-step-slider__image">
+                            </div>
+                            <div class="step-by-step-slider__slide-content-wrap">
+                                <h3 class="step-by-step-slider__slide-title">Step 1. Preparation</h3>
+                                <p class="step-by-step-slider__slide-text">We work out the legal and practical basis for the token emission, help determine its starting price and develop a technical task for creating the infrastructure.</p>
+                            </div>
+                        </div>
+                        <div class="step-by-step-slider__slide step-by-step-slider__slide--creation">
+                            <div class="step-by-step-slider__image-wrap">
+                                <img src="img/slider-slide2.svg" alt="Компьютер" class="step-by-step-slider__image">
+                            </div>
+                            <div class="step-by-step-slider__slide-content-wrap">
+                                <h3 class="step-by-step-slider__slide-title">Step 2. Creation</h3>
+                                <p class="step-by-step-slider__slide-text">We develop the infrastructure, issue your token, train your staff in technical work or provide additional services. We conduct a preliminary sale of your token to a closed pool of investors.</p>
+                            </div>
+                        </div>
+                        <div class="step-by-step-slider__slide step-by-step-slider__slide--listing">
+                            <div class="step-by-step-slider__image-wrap">
+                                <img src="img/slider-slide3.svg" alt="Компьютер" class="step-by-step-slider__image">
+                            </div>
+                            <div class="step-by-step-slider__slide-content-wrap">
+                                <h3 class="step-by-step-slider__slide-title">Step 3. Listing</h3>
+                                <p class="step-by-step-slider__slide-text">We list your tokens on agreed platforms and release them for sale on your and our infrastructure.</p>
+                            </div>
+                        </div>
+                        <div class="step-by-step-slider__slide step-by-step-slider__slide--asset-management">
+                            <div class="step-by-step-slider__image-wrap">
+                                <img src="img/slider-slide4.svg" alt="Компьютер" class="step-by-step-slider__image">
+                            </div>
+                            <div class="step-by-step-slider__slide-content-wrap">
+                                <h3 class="step-by-step-slider__slide-title">Step 4. Asset management</h3>
+                                <p class="step-by-step-slider__slide-text">We carry out marketing and sales management of a digital asset, provide technical support or transfer a fully formed and functional product to your team.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -470,8 +513,9 @@
             </div>
         </div>
     </div>
-
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
