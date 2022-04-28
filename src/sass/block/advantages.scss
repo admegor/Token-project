@@ -10,13 +10,15 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, minmax(200px, 450px));
         row-gap: 30px;
-        column-gap: 70px;
+        column-gap: 30px;
         @include lg {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, minmax(200px, 450px));
-            column-gap: 30px;
+            row-gap: 15px;
+            column-gap: 15px;
         }
         @include md {
+            row-gap: 12px;
             column-gap: 12px;
             grid-template-rows: repeat(3, minmax(200px, 276px));
         }
@@ -31,6 +33,7 @@
         position: relative;
         transition: all .3s ease;
         overflow: hidden;
+        cursor: url("../../img/cursor-custom.svg"), pointer;
         @include md {
             height: 276px;
         }
@@ -133,7 +136,7 @@
         z-index: 1;
         font-size: 20px;
         line-height: 22.5px;
-        margin-bottom: 12px;
+        margin-bottom: 30px;
         @include lg {
             margin-bottom: 6px;
             font-size: 20px;
@@ -170,5 +173,6 @@
         font-size: 32px;
         line-height: 25px;
         margin: 0;
+        margin-bottom: 20px;
     }
 }

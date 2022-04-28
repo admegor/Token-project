@@ -7,3 +7,5 @@ $burgerBtn.addEventListener('click', function() {
     $nav.classList.toggle('mobile-active');
     $headerContainer.classList.toggle('header__mobile-active');
 })
+
+
