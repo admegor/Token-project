@@ -30,6 +30,7 @@
         height: 450px;
         position: relative;
         transition: all .3s ease;
+        overflow: hidden;
         @include md {
             height: 276px;
         }
