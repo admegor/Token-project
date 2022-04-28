@@ -590,21 +590,21 @@
 
     <div id="form-popup" class="popup popup-form">
         <div class="popup__body">
-            <div class="popup-form__content">
-                <a class="popup__close close-popup" href="#"></a>
-                <div class="popup-form__top">
-                    Leave your contact details, our manager will contact you ASAP.
+                <div class="popup-form__content popup__content">
+                    <a class="popup__close close-popup" href="#"></a>
+                    <div class="popup-form__top">
+                        Leave your contact details, our manager will contact you ASAP.
+                    </div>
+                    <div class="popup-form__bottom">
+                        <form class="form-contanct" action="">
+                            <label for="name">Name</label>
+                            <input type="text" name="user_name" id="name" required>
+                            <label for="tg">Your telephone/ Telegram nickname </label>
+                            <input type="text" name="user_telegram" id="tg" required>
+                            <button class="popup-form__submit button-reset button-main" type="submit">Send</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="popup-form__bottom">
-                    <form class="form-contanct" action="">
-                        <label for="name">Name</label>
-                        <input type="text" name="user_name" id="name" required>
-                        <label for="tg">Your telephone/ Telegram nickname </label>
-                        <input type="text" name="user_telegram" id="tg" required>
-                        <button class="popup-form__submit button-reset button-main" type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

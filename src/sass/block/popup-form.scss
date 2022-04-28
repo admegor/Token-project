@@ -14,13 +14,7 @@
         padding: 40px 60px 60px;
         background-color: #ffffff;
         
-        & .form-contanct input[type="label"] {
-            margin: 0;
-            font-size: 20px;
-            margin-bottom: 5px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
+        
         & input[type="text"] {
             padding: 10px 15px;
             margin-bottom: 30px;
@@ -41,5 +35,17 @@
         &__bottom {
             padding: 20px 10px 30px;
         }
+    }
+}
+
+#form-popup .popup__content {
+    max-width: 570px;
+    padding: 0;
+    &  .form-contanct label {
+        color: #262626;
+        margin: 0;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: 500;
     }
 }
