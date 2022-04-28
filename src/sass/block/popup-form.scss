@@ -1,0 +1,45 @@
+.popup-form {
+    &__content {
+        max-width: 570px;
+        width: 100%;
+        position: relative;
+        transition: all .8s ease;
+    }
+    &__top {
+        background: $accent;
+        padding: 40px 60px;
+        color: #ffffff;
+    }
+    &__bottom {
+        padding: 40px 60px 60px;
+        background-color: #ffffff;
+        
+        & .form-contanct input[type="label"] {
+            margin: 0;
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        & input[type="text"] {
+            padding: 10px 15px;
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+        & .form-contanct .popup-form__submit {
+            border-color: $accent;
+            background-color: $accent;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+    }
+    @include md {
+        &__top {
+            padding: 20px 10px;
+            padding-right: 45px;
+        }
+        &__bottom {
+            padding: 20px 10px 30px;
+        }
+    }
+}

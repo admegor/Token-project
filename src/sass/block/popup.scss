@@ -1,4 +1,5 @@
 .popup {
+    z-index: 2;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -21,10 +22,16 @@
         background-color: $accent;
     }
     #agency &__content {
-        background-color: #F98532;
+        background-color: #262626;
+    }
+    #agency &__block--link {
+        color: #262626;
     }
     #company &__content {
-        background-color: #56D62A;
+        background-color: #E06AE9;
+    }
+    #company &__block--link {
+        color: #E06AE9;
     }
     &__content {
         color: #ffffff;
@@ -97,6 +104,15 @@
         &:nth-child(2n) {
             margin-left: 3%;
         }
+        &--link {
+            background-color: #ffffff;
+            text-decoration: none;
+            color: $accent;
+            font-weight: 700;
+            &:hover .popup__block-link-form p::after {
+                right: -120px;
+            }
+        }
     }
     &__content-wrap {
         display: flex;
@@ -113,6 +129,27 @@
         margin: 0;
         font-size: 20px;
         line-height: 1.15;
+    }
+    &__block-link-form {
+        height: 100%;
+        padding-right: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // position: relative;
+        & p {
+            position: relative;
+        }
+        & p::after {
+            content: "";
+            position: absolute;
+            right: -110px;
+            top: 9px;
+            background: url("../../img/icon-arrow-accent.svg") no-repeat center center;
+            width: 80px;
+            height: 15px;
+            transition: all .1s ease;
+        }
     }
     @include lg {
         &__close {

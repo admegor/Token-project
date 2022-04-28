@@ -91,12 +91,19 @@
         margin-top: 20px;
         margin-bottom: 10px;
         display: none;
+        @include md {
+            margin-top: 5px;
+            margin-bottom: 2px;
+        }
     }
     &__block-text {
         font-size: 20px;
         line-height: 30px;
         padding: 0 40px;
         display: none;
+        @include md {
+            padding: 0 5px;
+        }
     }
     &__block:hover &__block-title,
     &__block:hover &__block-text {
