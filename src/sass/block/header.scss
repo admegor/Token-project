@@ -11,6 +11,14 @@
     }
     &__logo-link {
         height: 58px;
+        & img {
+            height: 58px;
+            min-width: 55px;
+            @include md {
+                min-width: 39px;
+                height: 41px;
+            }
+        }
     }
     &__menu-burger {
         display: none;
