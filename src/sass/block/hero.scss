@@ -1,13 +1,17 @@
 .hero {
     height: calc(100vh - 80px);
     overflow-y: hidden;
+    & .container {
+        height: 100%;
+    }
     &__wrap {
         display: flex;
         height: 100%;
     }
     &__content {
-        margin-top: 138px;
         max-width: 710px;
+        align-self: center;
+        margin-bottom: 150px;
     }
     &__title {
         font-weight: 600;

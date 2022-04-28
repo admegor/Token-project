@@ -2,6 +2,7 @@
     &__list {
         @include list-reset;
         display: flex;
+        margin: 0 10px;
     }
     &__item+&__item {
         margin-left: 26px;

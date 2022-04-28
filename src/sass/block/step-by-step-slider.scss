@@ -120,3 +120,24 @@
 .slick-arrow.slick-disabled{
     background: url("../../img/slider-arrow-disabled.png") no-repeat center center;
 }
+
+/* Точки (булиты) */
+.slick-dots{
+    position: absolute;
+    top: -100px;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active {
+
+}
+.slick--active-color {
+    background-color: $accent;
+}
+/* Элемент точки */
+.slick-dots li button{}

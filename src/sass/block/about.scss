@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        overflow: hidden;
         @include lg {
             font-size: 18px;
         }
@@ -83,6 +84,23 @@
             font-size: 12px;
             line-height: 1.2;
         }
+    }
+    &__block-title {
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: none;
+    }
+    &__block-text {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0 40px;
+        display: none;
+    }
+    &__block:hover &__block-title,
+    &__block:hover &__block-text {
+        display: inline-block;
     }
     &__block:hover {
         transition: all .3s ease;
