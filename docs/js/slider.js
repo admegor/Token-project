@@ -3,6 +3,7 @@ $(document).ready(function() {
     $slider.slick({
         infinite: false,
         dots: true,
+        speed: 200,
         responsive: [
             {
                 breakpoint: 992,
