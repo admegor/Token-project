@@ -4,7 +4,7 @@
     padding: 138px 0 0;
     &__bg-wrap {
         background: url("../../img/bg-footer.svg") no-repeat bottom center;
-        background-size: cover;
+        background-size: contain;
         height: 100%;   
         padding-bottom: 450px;     
     }
