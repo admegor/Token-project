@@ -1,7 +1,13 @@
 .contacts-section {
-    background-color: $accent;
+    background-color: #262626;
     color: #ffffff;
-    padding: 138px 0 175px;
+    padding: 138px 0 0;
+    &__bg-wrap {
+        background: url("../../img/bg-footer.svg") no-repeat bottom center;
+        background-size: cover;
+        height: 100%;   
+        padding-bottom: 450px;     
+    }
     &__wrap {
         display: flex;
         justify-content: space-between;
@@ -10,8 +16,7 @@
         margin-left: 80px;
     }
     &__content {
-        max-width: 390px;
-        width: 40%;
+        width: 100%;
     }
     &__title {
         font-size: 48px;
@@ -23,6 +28,49 @@
         line-height: 30px;
         margin-bottom: 65px;
     }
+    & &__form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        & .form-contanct__submit {
+            margin-top: 0;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            width: 100%;
+            background-color: $accent;
+            border-color: $accent;
+            text-transform: uppercase;
+        }
+        @include md {
+            flex-direction: column;
+        }
+    }
+    & .form-contanct__wrap-block {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        position: relative;
+        padding-top: 35px;
+        & input[type="text"] {
+            max-width: initial;
+            width: 100%;
+            background-color: #262626;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 17px 15px !important;
+            max-width: 370px;
+        }
+        & label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+        }
+        @include md {
+            width: 100%;
+        }
+    }
     @include lg {
         &__image-wrap {
             display: none;
@@ -32,9 +80,15 @@
             width:100%;
             margin: 0 auto;
         }
+        &__bg-wrap {
+            padding-bottom: 300px;
+        }
     }
     @include md {
-        padding: 50px 0;
+        padding: 50px 0 0;
+        &__bg-wrap {
+            padding-bottom: 180px;
+        }
         &__subtitle {
             font-size: 14px;
             margin-bottom: 30px;

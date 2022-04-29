@@ -2,11 +2,10 @@
     background-color: $accent;
     color: #ffffff;
     padding-bottom: 230px;
-    &__title {
-        display: inline-block;
+    &__title {        
         padding-bottom: 58px;
         border-bottom: 1.5px solid #ffffff;
-        margin-bottom: 105px;
+        margin-bottom: 60px;
     }
     &__content {
         display: flex;
@@ -17,15 +16,14 @@
     &__block {
         max-width: 393px;
         width: 100%;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -50px;
-            width: 80px;
-            height: 15px;
-            background: url("../../img/icon-arrow.svg") no-repeat 0 0;
+        &:nth-child(1).animate__fadeIn {
+            -webkit-animation-delay:.3s;
+        }
+        &:nth-child(2).animate__fadeIn {
+            -webkit-animation-delay:.5s;
+        }
+        &:nth-child(3).animate__fadeIn {
+            -webkit-animation-delay:.7s;
         }
     }
     &__block-title {
@@ -37,6 +35,9 @@
     &__block-content {
         margin: 0;
         font-size: 22px;
+    }
+    &__block-icon-wrap {
+        margin-bottom: 40px;
     }
     @include md {
         &__title {

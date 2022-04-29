@@ -42,6 +42,7 @@
         justify-content: center;
         position: relative;
         overflow: hidden;
+        cursor: url("../../img/cursor-custom.svg"), pointer;
         @include lg {
             font-size: 18px;
         }

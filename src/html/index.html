@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заголовок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -19,7 +21,7 @@
                     <h1 class="hero__title">Create real estate tokens <br>and attract investments</h1>
                     <p class="hero__subtitle">Issue e-certificates and create a digital infrastructure <br>for real estate units.
                     </p>
-                    <a class="button-reset hero__button hero__button--accent popup-link" href="#button-popup">Get advice</a>
+                    <a class="button-reset hero__button hero__button--accent popup-link" href="#form-popup">Get advice</a>
                 </div>
                 <div class="hero__image-wrap">
                     <img class="hero__image" src="img/hero-image.jpg" alt="Токенизация" width="686" height="725">
@@ -32,17 +34,26 @@
         <div class="container">
             <h2 class="info__title block-title">Why tokenize <br>real estate?</h2>
             <div class="info__content">
-                <div class="info__block">
+                <div class="info__block wow animate__fadeIn">
+                    <div class="info__block-icon-wrap">
+                        <img class="info__block-icon" src="../img/icon-info-shield.svg" alt="Icon safety">
+                    </div>
                     <h3 class="info__block-title">Safety</h3>
                     <p class="info__block-content">Reliable tool protecting from sanctions and volatility of national currency
                     </p>
                 </div>
-                <div class="info__block">
+                <div class="info__block wow animate__fadeIn">
+                    <div class="info__block-icon-wrap">
+                        <img class="info__block-icon" src="../img/icon-info-key.svg" alt="Icon key">
+                    </div>
                     <h3 class="info__block-title">Ease</h3>
                     <p class="info__block-content">Simple solution without additional operations. Digital assets are officially recognized as property.
                     </p>
                 </div>
-                <div class="info__block">
+                <div class="info__block wow animate__fadeIn">
+                    <div class="info__block-icon-wrap">
+                        <img class="info__block-icon" src="../img/icon-info-check.svg" alt="Icon check">
+                    </div>
                     <h3 class="info__block-title">Ready-made</h3>
                     <p class="info__block-content">We carry out the whole range of work: from technical development and legal support to the development of a marketing strategy and sales strategy.
                     </p>
@@ -336,23 +347,27 @@
     </section>
 
     <section class="contacts-section">
-        <div class="container">
-            <div class="contacts-section__wrap">
-                <div class="contacts-section__content">
-                    <h2 class="contacts-section__title block-title">Contacts:</h2>
-                    <p class="contacts-section__subtitle">Оставьте свои контактые данные<br>Наш менеджер свяжется с вами!</p>
-                    <form class="contacts-section__form form-contanct" action="">
-                        <label for="name">Your name</label>
-                        <input type="text" name="user_name" id="name" required>
-                        <label for="tg">Your telegram</label>
-                        <input type="text" name="user_telegram" id="tg" required>
-                        <button class="form-contanct__submit button-reset button-main" type="submit">Send</button>
-                    </form>
+        <div class="contacts-section__bg-wrap">
+            <div class="container">
+                <div class="contacts-section__wrap">
+                    <div class="contacts-section__content">
+                        <h2 class="contacts-section__title block-title">Have a questions?</h2>
+                        <p class="contacts-section__subtitle">Leave your contact details, our manager will contact you ASAP.</p>
+                        <form class="contacts-section__form form-contanct" action="">
+                            <div class="form-contanct__wrap-block">
+                                <label for="name">Name</label>
+                                <input type="text" name="user_name" id="name" required>
+                            </div>
+                            <div class="form-contanct__wrap-block">
+                                <label for="tg">Your phone/ Telegram nickname</label>
+                                <input type="text" name="user_telegram" id="tg" required>
+                            </div>
+                            <div class="form-contanct__wrap-block">
+                                <button class="form-contanct__submit button-reset button-main" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="contacts-section__image-wrap">
-                    <img class="contacts-section__image" src="../img/contact-image.svg" alt="Ракета взлетает и ноутбук" width="712" height="545">
-                </div>
-
             </div>
         </div>
     </section>
@@ -510,50 +525,6 @@
             </div>
         </div>
     </div>
-    <div id="button-popup" class="popup popup-question">
-        <div class="popup__body">
-            <div class="popup-question__content">
-                <a class="popup__close close-popup" href="#"></a>
-                <div class="popup-question__text-wrap">
-                    <p class="popup-question__text">
-                        Ответьте на несколько простых вопросов и мы сформируем индивидуальное предложение для вас
-                    </p>
-                    <div class="popup-question__counter"><span>1</span>/3</div>
-                </div>
-                <div class="popup-question__progressbar-wrap">
-                    <div class="popup-question__progressbar-inner"></div>
-                    <div class="popup-question__progressbar-pointer popup-question__progressbar-pointer--active">
-                        <span>Типы компании</span>
-                    </div>
-                    <div class="popup-question__progressbar-pointer">
-                        <span>Цель токенизации</span>
-                    </div>
-                    <div class="popup-question__progressbar-pointer">
-                        <span>Услуги</span>
-                    </div>
-                </div>
-                <p class="popup-question__text-type">Тип вашей компании</p>
-                <div class="popup-question__type-company-wrap">
-                    <div class="popup-question__type-company-block">
-                        <div class="popup-question__type-company-image"></div>
-                        <p class="popup-question__type-company-text">Единичные объекты</p>
-                    </div>
-                    <div class="popup-question__type-company-block">
-                        <div class="popup-question__type-company-image"></div>
-                        <p class="popup-question__type-company-text">Массовое строительство</p>
-                    </div>
-                    <div class="popup-question__type-company-block">
-                        <div class="popup-question__type-company-image"></div>
-                        <p class="popup-question__type-company-text">Коммерческая застройка</p>
-                    </div>
-                    <div class="popup-question__type-company-block">
-                        <div class="popup-question__type-company-image"></div>
-                        <p class="popup-question__type-company-text">Другой тип</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="form-popup" class="popup popup-form">
         <div class="popup__body">
@@ -575,6 +546,10 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        </script>
     <script src="js/slick.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
