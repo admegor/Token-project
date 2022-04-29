@@ -116,9 +116,8 @@
         transform: scaleY(92px);
         height: 375px;
         @include md {
-            transform: translatey(-54px);
-            transform: scaleY(54px);
-            height: 154px;
+            transform: translatey(0);
+            height: auto;
         }
     }
     &__block--DBX:hover::after {
@@ -140,5 +139,40 @@
         visibility: visible;
         position: initial;
         height: auto;
+    }
+    @include md {
+        &__inner {
+            flex-direction: column;
+        }
+        &__block {
+            height: auto;
+            width: 100%;
+            padding: 20px 30px;
+            flex-direction: row;
+            &::after {
+                display: none;
+            }
+        }
+        &__wrap {
+            display: block;
+            height: auto;
+        }
+        &__block &__block-title,
+        &__block &__block-text {
+            display: block;
+            transition: all .3s ease;
+            opacity: 1;
+            visibility: visible;
+            position: initial;
+            height: auto;
+            text-align: left;
+        }
+        &__block &__block-title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        &__block &__block-text {
+            font-size: 15px;
+        }
     }
 }
