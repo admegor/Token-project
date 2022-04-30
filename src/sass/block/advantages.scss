@@ -175,4 +175,59 @@
         margin: 0;
         margin-bottom: 20px;
     }
+    @include md {
+        &__block {
+            padding: 20px;
+            justify-content: flex-start;
+            max-width: 270px;
+            width: 270px;
+            &:nth-child(1):hover .advantages__content {
+                margin-bottom: 0;
+            }
+            & .advantages__image {
+                order: 1;
+                margin-top: 0;
+                position: initial;
+                max-height: 90px;
+                height: 90px;
+                margin-bottom: 15px;
+                width: auto;
+                background-size: contain !important;
+                background-position: top left !important;
+            }
+            &__block:hover .advantages__content {
+                height: auto;
+                max-height: initial;
+            }
+        }
+        &__block+&__block {
+            margin-left: 12px;
+        }
+        &__image-gradient {
+            display: none;
+        }
+        &__content {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            font-size: 15px;
+            font-weight: 600;
+            max-height: initial;
+            transform: translateY(0);
+            order: 3;
+        }
+        &__block-title {
+            order: 2;
+        }
+        &__wrap {
+            display: flex;
+            grid-template-columns: none;
+            column-gap: initial;
+            row-gap: initial;
+            min-width: 0;
+            & .slick-list {
+                overflow: visible;
+            }
+        }
+    }
 }

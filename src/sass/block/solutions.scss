@@ -19,16 +19,16 @@
         text-decoration: none;
         transition: all ease .3s;
         &:nth-child(1):hover {
-            color: #f55151;
+            background-color: #7E44FE;
         }
         &:nth-child(2):hover {
-            color: #7e44fe;
+            background-color: #4BBC24;
         }
         &:nth-child(3):hover {
-            color: #fa44fe;
+            background-color: #F55151;
         }
     }
-    &__block + &__block {
+    &__block+&__block {
         margin-left: 20px;
     }
     &__block-title {
@@ -66,7 +66,7 @@
             max-width: initial;
             width: 49%;
         }
-        &__block + &__block {
+        &__block+&__block {
             margin-left: initial;
         }
         &__block-title {

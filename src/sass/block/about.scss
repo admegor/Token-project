@@ -129,7 +129,7 @@
     &__block--s:hover {
         background-color: #56D62A;
         &::after {
-            background-color: #56D62A;            
+            background-color: #56D62A;
         }
     }
     &__block:hover &__block-title,
@@ -148,9 +148,32 @@
             height: auto;
             width: 100%;
             padding: 20px 30px;
+            padding-left: 0;
             flex-direction: row;
+            justify-content: flex-start;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 90%;
+                height: 1px;
+                bottom: 0;
+                left: 5%;
+                opacity: 0.3;
+                background-color: #ffffff;
+            }
             &::after {
                 display: none;
+            }
+            &--bang img {
+                max-width: 77px;
+            }
+            &--DBX img {
+                max-width: 43px;
+            }
+            &--s img {
+                max-width: 39px;
             }
         }
         &__wrap {
@@ -173,6 +196,20 @@
         }
         &__block &__block-text {
             font-size: 15px;
+            & br {
+                display: none;
+            }
+        }
+        &__block:hover &__block-title,
+        &__block:hover &__block-text {
+            display: block;
+            margin-left: 0;
+        }
+        &__block-image-wrap {
+            min-width: 133px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

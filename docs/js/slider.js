@@ -1,41 +1,57 @@
 $(document).ready(function() {
     let $slider = $('.step-by-step-slider__inner');
+    let $sliderAdvantages = $('.advantages__wrap');
+
+    $sliderAdvantages.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        infinite: false,
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: 'unslick',
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }]
+    });
+
     $slider.slick({
         infinite: false,
         dots: true,
         speed: 200,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                }
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                arrows: false,
             }
-        ]
+        }]
     });
 
     let progressBarLine = $('.progressbar__progressbar-inner');
     const points = document.querySelectorAll('.progressbar__progressbar-pointer');
     const pointsText = document.querySelectorAll('.progressbar__point-text');
-    const dotsWrap = document.querySelector('.slick-dots'); 
+    const dotsWrap = document.querySelector('.slick-dots');
     let slickActive = document.querySelector('.slick-active');
     dotsWrap.childNodes[0].classList.add('slick--active-color');
-    
-    $slider.on("afterChange", function(event, slick, currentSlide, nextSlide){
+
+    $slider.on("afterChange", function(event, slick, currentSlide, nextSlide) {
         progressBarLine.css('width', (currentSlide + 1) * 20 + "%");
         paintPoints(currentSlide + 1);
         paintLine(currentSlide);
     });
 
     function paintPoints(count) {
-        for (let i = 0; i <= dotsWrap.childNodes.length -1; i++) {
+        for (let i = 0; i <= dotsWrap.childNodes.length - 1; i++) {
             if (dotsWrap.childNodes[i].classList.contains('slick--active-color')) {
                 dotsWrap.childNodes[i].classList.remove('slick--active-color');
             }
         }
         for (let k = 0; k < count; k++) {
             dotsWrap.childNodes[k].classList.add('slick--active-color');
-          }
+        }
     };
 
     function paintLine(e) {
@@ -59,5 +75,4 @@ $(document).ready(function() {
 
 
 
-    })
-    
+})
