@@ -1969,7 +1969,9 @@ template {
         margin-bottom: 8px
     }
     .about__block .about__block-text {
-        font-size: 15px
+        font-size: 15px;
+        margin-left: 0;
+        padding-left: 0;
     }
     .about__block:hover .about__block-text,
     .about__block:hover .about__block-title {
@@ -2370,6 +2372,9 @@ template {
     }
     .block-title {
         font-size: 30px
+    }
+    .about__block-text {
+        margin-left: 0;
     }
 }
 

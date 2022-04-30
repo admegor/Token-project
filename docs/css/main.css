@@ -2025,6 +2025,7 @@ body {
     .about__block-text {
         font-size: 12px;
         line-height: 1.2;
+        margin-left: 0;
     }
     .about__block-title {
         margin-top: 5px;
@@ -2112,6 +2113,10 @@ body {
     .about__block:hover .about__block-text {
         display: block;
         margin-left: 0;
+    }
+    .about__block-text {
+        margin-left: 0;
+        padding-left: 0;
     }
     .about__block-image-wrap {
         min-width: 133px;
