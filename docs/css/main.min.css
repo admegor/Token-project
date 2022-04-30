@@ -2379,3 +2379,7 @@ template {
         margin-top: 15px
     }
 }
+
+.advantages {
+    overflow: hidden;
+}

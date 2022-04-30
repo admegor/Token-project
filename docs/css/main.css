@@ -437,6 +437,10 @@ body {
     height: auto;
 }
 
+.advantages {
+    overflow: hidden;
+}
+
 .advantages__title {
     margin-bottom: 100px;
 }
