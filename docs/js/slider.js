@@ -2,21 +2,38 @@ $(document).ready(function() {
     let $slider = $('.step-by-step-slider__inner');
     let $sliderAdvantages = $('.advantages__wrap');
 
-    $sliderAdvantages.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        mobileFirst: true,
-        infinite: false,
-        dots: false,
-        arrows: false,
-        variableWidth: true,
-        responsive: [{
-            breakpoint: 768,
-            settings: 'unslick',
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }]
+
+    $(window).on('load resize', function() {
+        if ($(window).width() < 768) {
+            $sliderAdvantages.slick({
+                // centerMode: true,
+                dots: false,
+                infinite: false,
+                speed: 100,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            });
+        } else {
+            $sliderAdvantages.slick("unslick");
+        }
     });
+
+
+
+
+
+    // $sliderAdvantages.slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     mobileFirst: true,
+    //     // arrows: true,
+    //     responsive: [{
+    //         breakpoint: 768,
+    //         settings: 'unslick',
+    //         dots: true,
+    //     }]
+    // });
 
     $slider.slick({
         infinite: false,

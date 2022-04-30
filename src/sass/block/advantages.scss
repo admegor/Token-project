@@ -78,22 +78,22 @@
             }
         }
     }
-    &__block:nth-child(1) {
+    &__block--create {
         background-color: #56D62A;
     }
-    &__block:nth-child(2) {
+    &__block--classic {
         background-color: #FFAD28;
     }
-    &__block:nth-child(3) {
+    &__block--safety {
         background-color: #F55151;
     }
-    &__block:nth-child(4) {
+    &__block--support {
         background-color: #151515;
     }
-    &__block:nth-child(5) {
+    &__block--stability {
         background-color: #7E44FE;
     }
-    &__block:nth-child(6) {
+    &__block--low {
         background-color: #FA44FE;
     }
     &__block:hover .advantages__image .advantages__image-gradient {
@@ -176,11 +176,15 @@
         margin-bottom: 20px;
     }
     @include md {
+        & .slick-list {
+            width: 100%;
+            max-width: 270px;
+        }
         &__block {
             padding: 20px;
             justify-content: flex-start;
             max-width: 270px;
-            width: 270px;
+            width: 270px !important;
             &:nth-child(1):hover .advantages__content {
                 margin-bottom: 0;
             }
@@ -225,6 +229,7 @@
             column-gap: initial;
             row-gap: initial;
             min-width: 0;
+            width: 100%;
             & .slick-list {
                 overflow: visible;
             }

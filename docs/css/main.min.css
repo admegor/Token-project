@@ -479,27 +479,27 @@ template {
     transform: translateY(100px)
 }
 
-.advantages__block:nth-child(1) {
+.advantages__block--create {
     background: #56d62a
 }
 
-.advantages__block:nth-child(2) {
+.advantages__block--classic {
     background: #ffad28
 }
 
-.advantages__block:nth-child(3) {
+.advantages__block--safety {
     background: #f55151
 }
 
-.advantages__block:nth-child(4) {
+.advantages__block--support {
     background: #151515
 }
 
-.advantages__block:nth-child(5) {
+.advantages__block--stability {
     background: #7e44fe
 }
 
-.advantages__block:nth-child(6) {
+.advantages__block--low {
     background: #fa44fe
 }
 
@@ -1998,7 +1998,27 @@ template {
         height: 276px
     }
     .advantages__block .advantages__image {
-        height: calc(100% - 20px);
+        height: calc(100% - 20px)
+    }
+    .advantages__content {
+        margin-bottom: 0
+    }
+    .advantages .slick-list {
+        width: 100%;
+        max-width: 270px
+    }
+    .advantages__block {
+        padding: 20px;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        max-width: 270px;
+        width: 270px!important
+    }
+    .advantages__block:nth-child(1):hover .advantages__content {
+        margin-bottom: 0
+    }
+    .advantages__block .advantages__image {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
@@ -2010,20 +2030,6 @@ template {
         width: auto;
         background-size: contain!important;
         background-position: top left!important
-    }
-    .advantages__content {
-        margin-bottom: 0
-    }
-    .advantages__block {
-        padding: 20px;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        max-width: 270px;
-        width: 270px
-    }
-    .advantages__block:nth-child(1):hover .advantages__content {
-        margin-bottom: 0
     }
     .advantages__block__block:hover .advantages__content {
         height: auto;
@@ -2063,7 +2069,8 @@ template {
         -moz-column-gap: initial;
         column-gap: initial;
         row-gap: initial;
-        min-width: 0
+        min-width: 0;
+        width: 100%
     }
     .advantages__wrap .slick-list {
         overflow: visible
