@@ -5,8 +5,8 @@
     &__bg-wrap {
         background: url("../../img/bg-footer.svg") no-repeat bottom center;
         background-size: contain;
-        height: 100%;   
-        padding-bottom: 450px;     
+        height: 100%;
+        padding-bottom: 450px;
     }
     &__wrap {
         display: flex;
@@ -52,6 +52,9 @@
         width: 33%;
         position: relative;
         padding-top: 35px;
+        @include md {
+            padding-top: 0;
+        }
         & input[type="text"] {
             max-width: initial;
             width: 100%;
@@ -66,9 +69,19 @@
             top: 0;
             left: 0;
             white-space: nowrap;
+            & br {
+                display: none;
+            }
         }
         @include md {
             width: 100%;
+            & label {
+                position: initial;
+                white-space: normal;
+                & br {
+                    display: initial;
+                }
+            }
         }
     }
     @include lg {
@@ -77,7 +90,7 @@
         }
         &__content {
             max-width: auto;
-            width:100%;
+            width: 100%;
             margin: 0 auto;
         }
         &__bg-wrap {

@@ -1,17 +1,24 @@
 .hero {
     height: calc(100vh - 80px);
+    max-height: 935px;
     overflow-y: hidden;
+    overflow: hidden;
     & .container {
         height: 100%;
     }
     &__wrap {
         display: flex;
         height: 100%;
+        position: relative;
     }
     &__content {
         max-width: 710px;
         align-self: center;
-        margin-bottom: 150px;
+        margin-bottom: 50px;
+        min-width: 620px;
+        @include md {
+            min-width: -webkit-fill-available;
+        }
     }
     &__title {
         font-weight: 600;
@@ -29,9 +36,10 @@
     }
     &__image-wrap {
         padding-left: 38px;
+        width: 100%;
     }
     &__image {
-        top: 104px;
+        bottom: 0;
         position: absolute;
     }
     &__button+&__button {

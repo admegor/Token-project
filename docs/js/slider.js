@@ -19,22 +19,6 @@ $(document).ready(function() {
         }
     });
 
-
-
-
-
-    // $sliderAdvantages.slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     mobileFirst: true,
-    //     // arrows: true,
-    //     responsive: [{
-    //         breakpoint: 768,
-    //         settings: 'unslick',
-    //         dots: true,
-    //     }]
-    // });
-
     $slider.slick({
         infinite: false,
         dots: true,
