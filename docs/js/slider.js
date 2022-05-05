@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    new WOW().init();
     let $slider = $('.step-by-step-slider__inner');
     let $sliderAdvantages = $('.advantages__wrap');
 
