@@ -347,7 +347,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  cursor: url("../../img/cursor-custom.svg"), pointer;
+  cursor: url("../img/cursor-custom.svg"), pointer;
 }
 
 .about__block:first-child::after,
@@ -475,31 +475,31 @@ body {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   overflow: hidden;
-  cursor: url("../../img/cursor-custom.svg"), pointer;
+  cursor: url("../img/cursor-custom.svg"), pointer;
 }
 
 .advantages__block:nth-child(1) .advantages__image {
-  background: url("../../img/icon-lamp.png") no-repeat center top;
+  background: url("../img/icon-lamp.png") no-repeat center top;
 }
 
 .advantages__block:nth-child(2) .advantages__image {
-  background: url("../../img/icon-computer.png") no-repeat center top;
+  background: url("../img/icon-computer.png") no-repeat center top;
 }
 
 .advantages__block:nth-child(3) .advantages__image {
-  background: url("../../img/icon-shield.png") no-repeat center top;
+  background: url("../img/icon-shield.png") no-repeat center top;
 }
 
 .advantages__block:nth-child(4) .advantages__image {
-  background: url("../../img/icon-checklist.png") no-repeat center top;
+  background: url("../img/icon-checklist.png") no-repeat center top;
 }
 
 .advantages__block:nth-child(5) .advantages__image {
-  background: url("../../img/icon-analytics.png") no-repeat center top;
+  background: url("../img/icon-analytics.png") no-repeat center top;
 }
 
 .advantages__block:nth-child(6) .advantages__image {
-  background: url("../../img/icon-coins.png") no-repeat center top;
+  background: url("../img/icon-coins.png") no-repeat center top;
 }
 
 .advantages__block .advantages__image {
@@ -766,7 +766,7 @@ body {
 }
 
 .contacts-section__bg-wrap {
-  background: url("../../img/bg-footer.svg") no-repeat bottom center;
+  background: url("../img/bg-footer.svg") no-repeat bottom center;
   background-size: contain;
   height: 100%;
   padding-bottom: 450px;
@@ -1453,7 +1453,7 @@ body {
   position: absolute;
   right: -110px;
   top: 9px;
-  background: url("../../img/icon-arrow-accent.svg") no-repeat center center;
+  background: url("../img/icon-arrow-accent.svg") no-repeat center center;
   width: 80px;
   height: 15px;
   -webkit-transition: all 0.1s ease;
@@ -1550,7 +1550,7 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  cursor: url("../../img/cursor-custom.svg"), pointer;
+  cursor: url("../img/cursor-custom.svg"), pointer;
 }
 
 .proposal__block:nth-child(1) {
@@ -1790,7 +1790,7 @@ body {
 .slick-arrow {
   position: absolute;
   top: calc(50% - 23px);
-  background: url("../../img/slider-arrow-active.png") no-repeat center center;
+  background: url("../img/slider-arrow-active.png") no-repeat center center;
   width: 26px;
   height: 46px;
   font-size: 0;
@@ -1817,7 +1817,7 @@ body {
 /* Стрелка не активная */
 
 .slick-arrow.slick-disabled {
-  background: url("../../img/slider-arrow-disabled.png") no-repeat center center;
+  background: url("../img/slider-arrow-disabled.png") no-repeat center center;
 }
 
 /* Точки (булиты) */
@@ -1886,43 +1886,43 @@ body {
 
 @supports (-webkit-appearance:none) {
   .advantages__block:nth-child(1) .advantages__image {
-    background-image: url("../../img/icon-lamp.webp");
+    background-image: url("../img/icon-lamp.webp");
   }
 
   .advantages__block:nth-child(2) .advantages__image {
-    background: url("../../img/icon-computer.webp") no-repeat center top;
+    background: url("../img/icon-computer.webp") no-repeat center top;
   }
 
   .advantages__block:nth-child(3) .advantages__image {
-    background: url("../../img/icon-shield.webp") no-repeat center top;
+    background: url("../img/icon-shield.webp") no-repeat center top;
   }
 
   .advantages__block:nth-child(4) .advantages__image {
-    background: url("../../img/icon-checklist.webp") no-repeat center top;
+    background: url("../img/icon-checklist.webp") no-repeat center top;
   }
 
   .advantages__block:nth-child(5) .advantages__image {
-    background: url("../../img/icon-analytics.webp") no-repeat center top;
+    background: url("../img/icon-analytics.webp") no-repeat center top;
   }
 
   .advantages__block:nth-child(6) .advantages__image {
-    background: url("../../img/icon-coins.webp") no-repeat center top;
+    background: url("../img/icon-coins.webp") no-repeat center top;
   }
 
   .contacts-section__bg-wrap {
-    background: url("../../img/bg-footer.svg") no-repeat bottom center;
+    background: url("../img/bg-footer.svg") no-repeat bottom center;
   }
 
   .popup__block-link-form p::after {
-    background: url("../../img/icon-arrow-accent.svg") no-repeat center center;
+    background: url("../img/icon-arrow-accent.svg") no-repeat center center;
   }
 
   .slick-arrow {
-    background: url("../../img/slider-arrow-active.webp") no-repeat center center;
+    background: url("../img/slider-arrow-active.webp") no-repeat center center;
   }
 
   .slick-arrow.slick-disabled {
-    background: url("../../img/slider-arrow-disabled.webp") no-repeat center center;
+    background: url("../img/slider-arrow-disabled.webp") no-repeat center center;
   }
 }
 

@@ -1,12 +1,25 @@
 $(document).ready(function() {
+    new WOW().init();
     let $slider = $('.step-by-step-slider__inner');
     let $sliderAdvantages = $('.advantages__wrap');
+
+    if ($(window).width() < 768) {
+        $sliderAdvantages.not('.slick-initialized').slick({
+            dots: false,
+            infinite: false,
+            speed: 100,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+        });
+    } else {
+        $sliderAdvantages.filter('.slick-initialized').slick('unslick');
+    }
 
 
     $(window).on('load resize', function() {
         if ($(window).width() < 768) {
-            $sliderAdvantages.slick({
-                // centerMode: true,
+            $sliderAdvantages.not('.slick-initialized').slick({
                 dots: false,
                 infinite: false,
                 speed: 100,
@@ -15,7 +28,7 @@ $(document).ready(function() {
                 arrows: false
             });
         } else {
-            $sliderAdvantages.slick("unslick");
+            $sliderAdvantages.filter('.slick-initialized').slick('unslick');
         }
     });
 
@@ -39,7 +52,11 @@ $(document).ready(function() {
     dotsWrap.childNodes[0].classList.add('slick--active-color');
 
     $slider.on("afterChange", function(event, slick, currentSlide, nextSlide) {
-        progressBarLine.css('width', (currentSlide + 1) * 20 + "%");
+        if (currentSlide == 3 ) {
+            progressBarLine.css('width', 99 + "%");
+        } else {
+            progressBarLine.css('width', (currentSlide + 1) * 20 + "%");
+        }
         paintPoints(currentSlide + 1);
         paintLine(currentSlide);
     });
