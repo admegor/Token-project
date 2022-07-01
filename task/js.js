@@ -22,7 +22,7 @@ const js = () => {
     }))
     .pipe(babel())
     .pipe(webpack({
-        mode: "production"
+        mode: "development"
     }))
     .pipe(dest(path.js.dest, { sourcemaps: true }));
 }

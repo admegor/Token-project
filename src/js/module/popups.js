@@ -11,6 +11,7 @@ for (let i = 0; i < popupLinks.length; i++) {
     popupLink.addEventListener('click', function(e) {
         const popupName = popupLink.getAttribute('href').replace('#', '');
         const currentPopup = document.getElementById(popupName);
+
         popupOpen(currentPopup);
         e.preventDefault();
     })
@@ -56,3 +57,7 @@ document.addEventListener('keydown', function(e) {
         popupClose(popupActive);
     }
 })
+
+document.addEventListener( 'wpcf7mailsent', function() {
+    ym(73948678,'reachGoal','real-estate');
+}, false);
